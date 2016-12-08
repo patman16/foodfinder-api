@@ -1,6 +1,6 @@
 {
-  "name": "Wildfly Swarm for Android Demo",
-  "description": "An example app running JBoss Wildfly Swarm using JAX-RS.",
-  "website": "http://wildfly-swarm.io/",
+  "name": "FoodFinder Data API",
+  "description": "Provides data for the Android FoodFinder app",
+  "website": "",
   "success_url": "/"
 }
