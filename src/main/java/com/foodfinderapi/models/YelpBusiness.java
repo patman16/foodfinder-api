@@ -1,4 +1,4 @@
-package com.foodfinder-api.models;
+package com.foodfinderapi.models;
 
 public class YelpBusiness {
     public String name;

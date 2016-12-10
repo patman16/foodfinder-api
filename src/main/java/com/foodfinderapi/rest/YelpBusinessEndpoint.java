@@ -1,6 +1,6 @@
-package com.foodfinder-api.rest;
+package com.foodfinderapi.rest;
 
-import com.foodfinder-api.models.YelpBusiness;
+import com.foodfinderapi.models.YelpBusiness;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.EntityManager;

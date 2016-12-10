@@ -1,4 +1,4 @@
-package com.foodfinder-api.rest;
+package com.foodfinderapi.rest;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Produces;

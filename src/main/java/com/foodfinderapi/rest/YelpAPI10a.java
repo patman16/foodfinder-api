@@ -1,4 +1,4 @@
-package com.foodfinder-api.rest;
+package com.foodfinderapi.rest;
 
 import org.scribe.builder.api.DefaultApi10a;
 import org.scribe.model.Token;

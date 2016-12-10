@@ -1,4 +1,4 @@
-package com.foodfinder-api.rest;
+package com.foodfinderapi.rest;
 
 import org.scribe.builder.ServiceBuilder;
 import org.scribe.model.OAuthRequest;
@@ -17,7 +17,7 @@ public class YelpAPI {
                 .apiKey(System.getenv("YELP_CONSUMER_KEY"))
                 .apiSecret(System.getenv("YELP_CONSUMER_SECRET"))
                 .build();
-        accessToken = new Token(System.getenv("YELP_TOKEN"), System.getenv("YELP_TOKEN_SECRET");
+        accessToken = new Token(System.getenv("YELP_TOKEN"), System.getenv("YELP_TOKEN_SECRET"));
     }
 
     public String Search(String searchTerm) {
