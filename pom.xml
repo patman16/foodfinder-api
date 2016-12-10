@@ -71,13 +71,6 @@
       <version>7.0</version>
       <scope>provided</scope>
     </dependency>
-	<!-- Java util dependency -->
-	<dependency> 
-      <groupId>net.sourceforge.javautil</groupId> 
-      <artifactId>common</artifactId> 
-      <version>0.0.5</version> 
-      <scope>compile</scope> 
-	</dependency>
 	<!-- Jcommander dependency -->
 	<dependency>
 	  <groupId>com.beust</groupId>
