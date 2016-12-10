@@ -2,6 +2,8 @@ package com.foodfinderapi.rest;
 
 import com.foodfinderapi.models.YelpBusiness;
 
+import java.util.ArrayList;
+
 import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
