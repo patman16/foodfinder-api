@@ -1,6 +1,6 @@
-package com.foodfinderapi.rest;
+package com.patman16.rest;
 
-import com.foodfinderapi.models.YelpBusiness;
+import com.patman16.models.YelpBusiness;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class YelpParser {
     public ArrayList<YelpBusiness> parseBusinesses(String yelpResponse) throws JSONException {
-		ArrayList<YelpBusiness> yelpBusinesses = new ArrayList<YelpBusiness>();
+        ArrayList<YelpBusiness> yelpBusinesses = new ArrayList<YelpBusiness>();
         JSONObject responseObject = new JSONObject(yelpResponse);
         JSONArray businesses = responseObject.getJSONArray("businesses");
         for (int i = 0; businesses.length() > i; i++) {
@@ -25,7 +25,7 @@ public class YelpParser {
             business.starRating = businessJSON.getDouble("rating");
             yelpBusinesses.add(business);
         }
-		
-		return yelpBusinesses;
+
+        return yelpBusinesses;
     }
 }

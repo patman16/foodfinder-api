@@ -1,4 +1,4 @@
-package com.foodfinderapi.rest;
+package com.patman16.rest;
 
 import org.scribe.builder.ServiceBuilder;
 import org.scribe.model.OAuthRequest;
@@ -20,10 +20,13 @@ public class YelpAPI {
         accessToken = new Token(System.getenv("YELP_TOKEN"), System.getenv("YELP_TOKEN_SECRET"));
     }
 
-    public String Search(String searchTerm) {
+    public String Search(double latitude, double longitude, int mileRadius, String searchTerm) {
+        String mapLocation = String.format("%1$.4f,%2$.4f", latitude, longitude);
+
         OAuthRequest request = new OAuthRequest(Verb.GET, "http://api.yelp.com/v2/search");
         request.addQuerystringParameter("term", searchTerm);
-        request.addQuerystringParameter("location", "Chicago, IL");
+        request.addQuerystringParameter("radius_filter", Integer.toString(mileRadius));
+        request.addQuerystringParameter("cll", mapLocation);
         authService.signRequest(accessToken, request);
         Response response = request.send();
         return response.getBody();
