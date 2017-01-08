@@ -25,7 +25,7 @@ public class YelpAPI {
 
         OAuthRequest request = new OAuthRequest(Verb.GET, "http://api.yelp.com/v2/search");
         request.addQuerystringParameter("term", searchTerm);
-        request.addQuerystringParameter("radius_filter", Integer.toString(mileRadius));
+        request.addQuerystringParameter("radius_filter", Integer.toString(mileRadius * 1609));
         request.addQuerystringParameter("ll", mapLocation);
         authService.signRequest(accessToken, request);
         Response response = request.send();
