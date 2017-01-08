@@ -1,4 +1,4 @@
-package com.patman16.rest;
+package com.foodfinderapi.rest;
 
 import org.scribe.builder.ServiceBuilder;
 import org.scribe.model.OAuthRequest;

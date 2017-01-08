@@ -1,6 +1,6 @@
-package com.patman16.rest;
+package com.foodfinderapi.rest;
 
-import com.patman16.models.YelpBusiness;
+import com.foodfinderapi.models.YelpBusiness;
 
 import java.util.ArrayList;
 
