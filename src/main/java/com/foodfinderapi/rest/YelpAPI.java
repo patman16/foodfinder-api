@@ -20,12 +20,13 @@ public class YelpAPI {
         accessToken = new Token(System.getenv("YELP_TOKEN"), System.getenv("YELP_TOKEN_SECRET"));
     }
 
-    public String Search(double latitude, double longitude, int mileRadius, String searchTerm) {
+    public String Search(double latitude, double longitude, double mileRadius, String searchTerm) {
         String mapLocation = String.format("%1$.4f,%2$.4f", latitude, longitude);
 
         OAuthRequest request = new OAuthRequest(Verb.GET, "http://api.yelp.com/v2/search");
         request.addQuerystringParameter("term", searchTerm);
-        request.addQuerystringParameter("radius_filter", Integer.toString(mileRadius * 1609));
+		int footRadius = (int)(mileRadius * 1609);
+        request.addQuerystringParameter("radius_filter", Integer.toString(footRadius));
         request.addQuerystringParameter("ll", mapLocation);
         authService.signRequest(accessToken, request);
         Response response = request.send();

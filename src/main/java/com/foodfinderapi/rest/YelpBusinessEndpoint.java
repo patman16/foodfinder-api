@@ -18,7 +18,7 @@ public class YelpBusinessEndpoint {
     @GET
     @Path("/{latitude}/{longitude}/{mileRadius}/{searchTerm}")
     @Produces(MediaType.APPLICATION_JSON)
-    public YelpBusiness[] get(@PathParam("latitude") double latitude, @PathParam("longitude") double longitude, @PathParam("mileRadius") int mileRadius, @PathParam("searchTerm") String searchTerm){
+    public YelpBusiness[] get(@PathParam("latitude") double latitude, @PathParam("longitude") double longitude, @PathParam("mileRadius") double mileRadius, @PathParam("searchTerm") String searchTerm){
 		if (latitude == 0.0 && longitude == 0.0)
             return new YelpBusiness[0];
 	
